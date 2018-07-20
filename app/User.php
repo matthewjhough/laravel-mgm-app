@@ -9,6 +9,16 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
+
+    public function contacts()
+    {
+        return $this->hasMany(Contacts::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *
