@@ -29,7 +29,7 @@ class TasksController extends Controller
         return redirect('/');
     }
 
-    public function edit()
+    public function edit(Task $task)
     {
         if (Auth::check() && Auth::user()->id == $task->user_id)
         {
