@@ -26,5 +26,5 @@ Route::post('/task','TasksController@create');
 Route::get('/task/{task}','TasksController@edit');
 Route::post('/task/{task}','TasksController@update');
 
-// default home controller
+// default contacts controller
 Route::resource('api/contacts', 'ContactController');
