@@ -8,6 +8,11 @@ use App\Http\Resources\Contact as ContactResource;
 
 class ContactController extends Controller
 {
+    public function index() 
+    {
+        $contacts = Contact::all();
+        return response()->json($contacts);
+    }
     //
     public function show ($id)
     {

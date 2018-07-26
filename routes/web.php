@@ -27,4 +27,4 @@ Route::get('/task/{task}','TasksController@edit');
 Route::post('/task/{task}','TasksController@update');
 
 // default home controller
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('api/contacts', 'ContactController');
